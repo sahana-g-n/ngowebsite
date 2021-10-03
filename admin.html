@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>    
+    
+      <meta charset="utf-8">
+         <meta name="viewport content=width=device-width, initial-scale=1">
+        <title>We Care</title>
+        <link rel="stylesheet" href="./css/about.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+              
+<script language="javascript">
+  function check(form)
+  {
+  
+  if(form.Admin_name.value == "admin" && form.pwd.value == "12345")
+  {
+    return true;
+  }
+  else
+  {
+    alert("Error Password or Username")
+    return false;
+  }
+  }
+  </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+          }
+        
+          .center{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+          }
+          .center h1{
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid silver;
+          }
+          .center form{
+            padding: 0 40px;
+            box-sizing: border-box;
+          }
+          form .txt_field{
+            position: relative;
+            border-bottom: 2px solid #adadad;
+            margin: 30px 0;
+          }
+          .txt_field input{
+            width: 100%;
+            padding: 0 5px;
+            height: 40px;
+            font-size: 16px;
+            border: none;
+            background: none;
+            outline: none;
+          }
+          .txt_field label{
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            color: #adadad;
+            transform: translateY(-50%);
+            font-size: 16px;
+            pointer-events: none;
+            transition: .5s;
+          }
+          .txt_field span::before{
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: #2691d9;
+            transition: .5s;
+          }
+          .txt_field input:focus ~ label,
+          .txt_field input:valid ~ label{
+            top: -5px;
+            color: #2691d9;
+          }
+          .txt_field input:focus ~ span::before,
+          .txt_field input:valid ~ span::before{
+            width: 100%;
+          }
+          .pass{
+            margin: -5px 0 20px 5px;
+            color: #a6a6a6;
+            cursor: pointer;
+          }
+          .pass:hover{
+            text-decoration: underline;
+          }
+          input[type="submit"]{
+            width: 100%;
+            height: 50px;
+            border: 1px solid;
+            background: #9062bb;
+            border-radius: 25px;
+            font-size: 18px;
+            color: #e9f4fb;
+            font-weight: 700;
+            cursor: pointer;
+            outline: none;
+          }
+          *upper border part*/
+header{
+  font: 20px/1.5 'Raleway'; /*go corona size*/
+  background: hsl(256, 50%, 71%);
+  color: #ffffff;  /*go corona*/
+  padding-top: 30px; /*upper border upper height*/
+  min-height: 50px; /*upper border bottom height*/
+  border-bottom: hsl(256, 32%, 75%) 6px solid;
+}
+
+/*home about contact us*/
+header a{
+  color:#ffffff;  
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size:16px; /*home about size*/
+}
+
+header li{
+  display:inline;
+  padding: 0 20px 0 20px; /*dist bet home about*/
+}
+
+header #branding{
+  float:center; /*home...position*/
+}
+
+header #branding h1{
+  margin:0;
+  font-weight:bolder;
+}
+
+header nav{
+  float:right;
+  margin-top:-40px;
+}
+
+header .highlight, header .current a{
+  color:#fff;
+  font-weight:bold;
+  font-size: 30px; /*home size*/
+}
+
+.highlighted{
+  font-weight:bolder;
+}
+
+/*underline animation*/
+header a {        
+  position: relative;
+}
+
+header a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 60%;
+  height: 1px;
+  opacity: 0;
+  background-color: hsl(256, 50%, 71%);
+  transform: translate(-50%, 0);
+  transition: all 0.3s ease-in-out;
+}
+
+header a:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+
+.container{
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+
+          input[type="submit"]:hover{
+            border-color: #9062bb;
+            transition: .5s;
+          }
+          .signup_link{
+            margin: 30px 0;
+            text-align: center;
+            font-size: 16px;
+            color: #666666;
+          }
+          .signup_link a{
+            color: #2691d9;
+            text-decoration: none;
+          }
+          .signup_link a:hover{
+            text-decoration: underline;
+          }
+          body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("https://thumbs.dreamstime.com/z/admin-login-sign-table-made-wood-68499314.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+    </style>
+</head>     
+
+ <body>
+    <header>
+        <div class="container">
+          <div id="branding">
+            <h1><i><img src="gallery\logo4.jpeg" style="width:60px; border-radius:50%;"><span class="highlighted"><i>We&nbsp;</span>Care</i></h1></i>
+          </div>
+          </div>
+          <nav>
+            <ul>
+            <li class="current"><a href="Admin.html">Admin</a></li>
+              <li ><a href="index.html">Home</a></li>
+              <li><a href="HTW.html">How it works</a></li>
+              <li><a href="About.html">About</a></li>
+              <li><a href="donate.html">Donations</a></li>
+              <li><a href="contact1.html">Contact Us</a></li>
+              <li><a href="index.html"> Logout </a> </li>
+            </ul>
+          </nav>
+      </header>
+      <div class="bg"></div>
+      <div class="center">
+        <h1>Admin Login page</h1>
+        <form name="loginForm" method="login" action="admin1.html">
+          <div class="txt_field">
+            <input type="text" name="Admin_name" required>
+            <span></span>
+            <label>Username</label>
+          </div>
+          <div class="txt_field">
+            <input type="password" name="pwd" required>
+            <span></span>
+            <label>Password</label>
+          </div>
+          
+          <input type="submit" onclick="return check(this.form)" value="Login">
+          
+        
+        </form>
+      </div>
+
+<footer style="height: 40px;">
+<section id="bottom">
+  <center>
+    <div class="container">
+    <footer style="font-size:20px";>
+      <i>Developed by interns of Tequed Labs:<br> 
+      Keerthana S - 4GW18IS023<br>
+      Navya M     - 4GW18IS035<br>
+      Sahana G N  - 4GW18IS046</i>
+      </div>
+      </div>
+      <div class="icons">
+          <a href="https://m.facebook.com/"><i class="fa fa-facebook"></i></a>
+          <a href="https://mobile.twitter.com/login?lang=en"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/login"><i class="fa fa-linkedin"></i></a>
+          <a href="https://gsuite.google.com/intl/en_in/products/currents/?utm_source=google&utm_medium=cpc&utm_campaign=japac-IN-all-en-dr-bkws-all-golden-trial-b-dr-1009153&utm_content=text-ad-none-none-DEV_m-CRE_346647869216-ADGP_Hybrid+%7C+AW+SEM+%7C+BKWS+~+BMM+%7C+Gplus+%7C+%5B1:1%5D+%7C+IN+%7C+EN+%7C+plus+google-KWID_43700041786536708-kwd-343014849725-userloc_9062215-network_g&utm_term=KW_%2Bplus%20%2Bgoogle&gclid=EAIaIQobChMInIfa4Ijp6wIVBnkqCh2dyAx-EAAYASAAEgJuIPD_BwE&gclsrc=aw.ds"><i class="fa fa-google-plus"></i>
+          </a>
+          <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="fa fa-instagram"></i></a>
+          <a href="https://mail.google.com/mail/u/0/"><i class="fa fa-envelope"></i></a>
+      </div>
+      </center>
+      </div>
+     </section>
+</footer>
+
+
+</body>
+
+</html>
